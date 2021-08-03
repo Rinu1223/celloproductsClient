@@ -1,0 +1,30 @@
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Create Event </h2>
+     
+  
+      <!-- Icon -->
+      
+  
+      <!-- Login Form -->
+      
+      <form (ngSubmit)="addItem()" [formGroup]="addform" autocomplete="off" >
+        <input type="text" class="fadeIn second" formControlName="title"  name="txtTitle" placeholder="Title">
+        <div class="errors" *ngIf="(addform.get('title')?.touched || addform.get('title')?.dirty) && addform.get('title')?.errors ">please enter title</div>
+        <input type="text"  class="fadeIn third" name="subTitle" formControlName="subTitle" placeholder="Sub Title">
+        <div class="errors" *ngIf="(addform.get('subTitle')?.touched || addform.get('subTitle')?.dirty) && addform.get('subTitle')?.errors ">Please enter sub title</div>
+        <input type="text"  class="fadeIn third" name="description" formControlName="description" placeholder="Description">
+        <div class="errors" *ngIf="(addform.get('description')?.touched || addform.get('description')?.dirty) && addform.get('description')?.errors ">Please enter description</div>
+      
+        <input type="submit" class="fadeIn fourth"  value="Add">
+        
+        
+      </form>
+  
+      
+     
+  
+    </div>
+  </div>
